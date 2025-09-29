@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/blender.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+form{
+    width: 400px;
+    display: flex;
+    box-shadow: 0 4px 24px rgb(34, 14, 206);
+    padding: 30px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    
+}
+legend{
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgb(18, 7, 80);
+
+}
+label{
+    font-size: 17px;
+    font-weight: 600px;
+}
+input{
+    padding: 8px 12px;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+}
+input[type="email"],
+input[type="password"]{
+    border: 1px solid rgb(48, 20, 201);
+
+
+}
+input[type="submit"]{
+    border: none;
+    background-color: aquamarine;
+    transform: 2s;
+    color: #ccc;
+}
+input[type="submit"]{
+    background-color: blue;
+}
+p{
+    text-align: center;
+    font-size: 17px;
+
+}
+p a{
+    text-decoration: none;
+    margin-left: 5px;
+}
+p a:hover{
+    text-decoration: underline;
+}
+</style>
+<body>
+    <form action="">
+        <legend>Sign up</legend>
+        
+        <label for="name"><b>name</b></label>
+        <input type="text" name="name" id="name" placeholder="enter name">
+        <label for="email"><b>email</b></label>
+        <input type="email" name="email" id="email" placeholder="enter email">
+        <label for="password"><b>password</b></label>
+        <input type="password" name="password" id="password" placeholder="enter password">
+        <label for="confirm padding"><b>confirm password</b></label>
+        <input type="confirm password" name="confirm password" id="confirm password" placeholder="confirm password">
+        <input type="submit" value="Login">
+        <hr>
+        <p><b>have an account already?</b><a href="login.html"><b>login</b></a></p>
+    </form>
+
+ <script>
+    function login(id) {
+        return document.getElementById(id);
+    }
+
+    let email = login("email");
+    let password = login("password");
+    let register = login("register");
+
+    register.addEventListener("click", function (e) {
+        e.preventDefault(); //Added parentheses to actually prevent default behavior
+
+        let error = document.querySelectorAll(".error");
+        let log = true; //Reset log to true at the start of each click
+
+        //  Email validation
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.value === "") {
+            error[0].innerHTML = "Email is required";
+            log = false;
+        } else if (!emailRegex.test(email.value)) {
+            error[0].innerHTML = "Email is invalid";
+            log = false;
+        } else {
+            error[0].innerHTML = "";
+        }
+
+        //  Password validation
+        let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/; // Removed stray bracket `]`
+        if (password.value === "") {
+            error[1].innerHTML = "Password is required";
+            log = false;
+        } else if (!passwordRegex.test(password.value)) {
+            error[1].innerHTML = "Password is invalid. It must include one uppercase letter, one lowercase letter, and a number.";
+            log = false;
+        } else {
+            error[1].innerHTML = "";
+        }
+
+        //Redirect if all validations pass
+        if (log) {
+            window.location.href = "web.html";
+        }
+    });
+</script>
+
+</body>
+</html>

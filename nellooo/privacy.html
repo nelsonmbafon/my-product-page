@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mbafon’s Kitchen Utensils | Privacy Policy & Terms</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background: #f8f8f8;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-top: 40px;
+      font-size: 28px;
+    }
+    h2 {
+      color: #34495e;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo img{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #494952;
+    color: #ffffff;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icons li{
+    list-style: none;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+
+}
+footer a:hover{
+    transform: scale(1.02);
+    color: #cece07;
+}
+
+form input{
+    padding: 10px 8px;
+    border-radius: 25px;
+
+}
+
+.icons li img {
+  width: 35px;   /* increased size */
+  height: 35px;
+  transition: 0.3s;
+}
+
+/* Facebook = blue */
+.icons li a[href*="facebook"] img {
+  filter: invert(32%) sepia(99%) saturate(5000%) hue-rotate(202deg) brightness(95%) contrast(98%);
+}
+
+/* WhatsApp = green */
+.icons li a[href*="whatsApp"] img {
+  filter: invert(40%) sepia(82%) saturate(600%) hue-rotate(89deg) brightness(95%) contrast(90%);
+}
+
+/* Twitter = light blue */
+.icons li a[href*="twitter"] img {
+  filter: invert(50%) sepia(91%) saturate(2000%) hue-rotate(176deg) brightness(96%) contrast(95%);
+}
+
+/* TikTok = black (you can add red/blue glow with shadows if you want) */
+.icons li a[href*="tiktok"] img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Form */
+.subscribe-box form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #28a745; /* green border */
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Input field */
+.subscribe-box input[type="email"] {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 250px;
+  color: #333;
+}
+
+/* Input placeholder */
+.subscribe-box input::placeholder {
+  color: #888;
+}
+
+/* Subscribe button */
+.subscribe-box button {
+  background: #28a745;   /* green background */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.subscribe-box button:hover {
+  background: #218838; /* darker green */
+}
+
+header {
+    background: #177cac;
+    padding: 15px 40px;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+.logo {
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(9, 233, 222, 0.815);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+}
+
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+nav ul { 
+    list-style: none; 
+    display: flex; 
+}
+nav ul li { 
+    margin-left: 25px; 
+}
+nav ul li a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: 0.3s; 
+}
+nav ul li a:hover { 
+    color: hwb(59 0% 0%); 
+    transform: scale(2);
+}
+
+
+
+/* search styles */
+
+.search{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input[type="text"]{
+    width: 75%;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid gray;
+    border-left: none;
+}
+
+.search input[type="submit"]{
+    width: 25%;
+    padding: 8px 0;
+    outline: none;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid gray;
+    border-right: none;
+}
+.language-select {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+}
+
+.language-select label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.language-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images/mbafon logo.png" alt="failed to load logo">Mbafon's Modern Kitchen ltd</div>
+
+        <form action="#" class="search">
+            <input type="text" placeholder="Search products">
+            <input type="submit" value="search">
+           
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="#Home"><b>Home</b></a></li>
+                <li><a href="products.html"><b>Pruducts</b></a></li>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="contacts.html"><b>contact</b></a></li>
+            </ul>
+            
+        </nav>
+       <p><b><a href="index.html">Signup</a></b></p>
+         <p><b><a href="login.html">login</a></b></p>
+    </header>
+
+  <h1>Privacy Policy – Mbafon’s Kitchen Utensils</h1>
+
+    <div class="section">
+        <h2>Information We Collect</h2>
+        <ul>
+        <li>Personal details such as name, phone number, email, or address when you make a purchase or contact us.</li>
+        <li>Payment details (processed securely through third-party providers — we do not store card details).</li>
+        <li>Browsing information such as cookies, device type, and interactions on our website.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>How We Use Your Information</h2>
+        <ul>
+        <li>To process and deliver your kitchen utensil orders.</li>
+        <li>To provide customer support and respond to inquiries.</li>
+        <li>To improve our products, website, and customer experience.</li>
+        <li>To send updates, offers, and promotions (only if you consent).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Sharing of Information</h2>
+        <ul>
+        <li>We do not sell or rent personal data.</li>
+        <li>Information may be shared with trusted partners (e.g., delivery services, payment processors) strictly to complete your order.</li>
+        <li>We may disclose information if required by law or to protect our business and customers.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Protection</h2>
+        <ul>
+        <li>We use secure systems to protect customer data from unauthorized access, alteration, or misuse.</li>
+        <li>Customers are advised to keep their login details private when using our website or app.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Your Rights</h2>
+        <ul>
+        <li>You can request access to the personal information we hold about you.</li>
+        <li>You may ask us to update, correct, or delete your data.</li>
+        <li>You can opt out of promotional messages anytime.</li>
+        </ul>
+    </div>
+
+    <h1>Terms & Conditions – Mbafon’s Kitchen Utensils</h1>
+
+    <div class="section">
+        <h2>Acceptance of Terms</h2>
+        <p>By purchasing from Mbafon’s Kitchen Utensils (via our website, app, or phone), you agree to these terms and conditions.</p>
+    </div>
+
+    <div class="section">
+        <h2>Orders and Payments</h2>
+        <ul>
+        <li>Orders must be placed through our official channels.</li>
+        <li>Payments can be made online or on delivery (where applicable).</li>
+        <li>Prices are subject to change without prior notice, but confirmed orders will be honored at the agreed price.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Delivery & Pickup</h2>
+        <ul>
+        <li>Delivery times may vary depending on distance, order volume, and weather.</li>
+        <li>We will do our best to deliver within the estimated timeframe but delays may occur.</li>
+        <li>Customers must provide accurate delivery information.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cancellations & Refunds</h2>
+        <ul>
+        <li>Orders can be canceled within a short window (before packaging and dispatch).</li>
+        <li>Once items are packaged or dispatched, cancellations may not be possible.</li>
+        <li>Refunds are issued only in case of wrong items, damaged goods, or failed delivery due to our error.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Product Use & Care</h2>
+        <ul>
+        <li>Customers are responsible for following the care instructions provided with utensils.</li>
+        <li>Mbafon’s Kitchen Utensils is not liable for misuse or damage caused by improper handling.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Limitation of Liability</h2>
+        <ul>
+        <li>Mbafon’s Kitchen Utensils is not responsible for delays, incorrect addresses, or issues caused by third-party services.</li>
+        <li>Our liability is limited to the value of the order placed.</li>
+        </ul>
+    </div>
+
+     <footer>
+  <div class="section">
+      <div class="logo">
+      <li><a href="logo"><img src="images/mbafon logo.png" alt=""></a></li>
+      </div>
+      <b>visit our social media handles</b>
+      <ul class="icons">
+        <li><a href="facebook"><img src="images/facebook.svg" alt=""></a></li>
+        <li><a href="whatsApp"><img src="images/whatsapp.svg" alt=""></a></li>
+        <li><a href="twitter"><img src="images/twitter (1).svg" alt=""></a></li>
+        <li><a href="tiktok"><img src="images/tiktok.svg" alt=""></a></li>
+      </ul>
+   </div>
+    <div class="section">
+      <b>Quick searches</b>
+        <li><a href="about company"><img src="About us" alt="">about our company</a></li>
+        <li><a href="sevices"><img src="About us" alt="">view our Services</a></li>
+        <li><a href="career and oppotunities"><img src="About us" alt="">career and oppotunity</a></li>
+        <li><a href="privacy and policy"><img src="About us" alt="">privacy and policy</a></li>
+    </div>
+    <div class="section">
+      <b>company</b>
+      <li><a href="About our company">About our company</a></li>
+      <li><a href="Our testimonials">Our testimonials</a></li>
+      <li><a href="latest products">latest products</a></li>
+      <li><a href="our partners">our partners</a></li>
+    </div>
+    <div class="section">
+      <b>contact Us</b>
+      <li><a href="email">email</a></li>
+      <li><a href="+237 677543244">+237 677543244</a></li>
+    </div>
+
+<div class="subscribe-box">
+  <form action="">
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
+  </div>
+  </div>
+    
+  </div>
+
+</footer>
+
+</body>
+</html>

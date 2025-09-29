@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="attend.css">
+</head>
+<body>
+    <header>
+  <h1>Fingerprint Attendance System</h1>
+</header>
+
+<main>
+  <!-- Day & Period Selection -->
+  <section id="day-period-section">
+    <h2>Select Day & Period</h2>
+    <label for="day-select">Day:</label>
+    <select id="day-select">
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+    </select>
+
+    <label for="period-select">Period:</label>
+    <select id="period-select">
+      <option value="1">Period 1</option>
+      <option value="2">Period 2</option>
+      <option value="3">Period 3</option>
+      <option value="4">Period 4</option>
+    </select>
+  </section>
+
+  <!-- Student Registration -->
+  <section id="add-student-section">
+    <h2>Register Student</h2>
+    <div id="register-form">
+      <img src="fingerprint.svg" alt="Register Fingerprint" id="register-fingerprint" title="Click to assign fingerprint">
+      <input type="text" id="student-name" placeholder="Student Name">
+      <button id="add-student">Register Student</button>
+    </div>
+    <h3>Registered Students</h3>
+    <ul id="student-list"></ul>
+  </section>
+
+  <!-- Attendance Table -->
+  <section id="attendance-section">
+    <h2>Attendance Records</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Day</th>
+          <th>Period</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="attendance-table"></tbody>
+    </table>
+    <button id="export-csv">Export CSV</button>
+    <button id="clear-session">Clear Session</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a73e8, #00c6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: #fff;
+    animation: slideFade 1s ease forwards;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  @keyframes slideFade {
+    to {opacity:1; transform: translateY(0);}
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {opacity:0; transform: translateX(-20px);}
+    to {opacity:1; transform: translateX(0);}
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .form-group input:focus {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.2);
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group .error {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 3px;
+    display: none;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .checkbox-group input {
+    margin-right: 10px;
+    accent-color: #ff7a18;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg,#ff7a18,#af002d);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.7;
+  }
+
+  .btn:hover:enabled {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Register</h2>
+  <form id="registerForm" novalidate>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <div class="error" id="nameError">Name is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <div class="error" id="emailError">Invalid email</div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <div class="error" id="passwordError">Password must have 8+ chars, uppercase, lowercase, number & symbol</div>
+    </div>
+
+    <div class="form-group">
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" placeholder="Confirm your password">
+      <div class="error" id="confirmError">Passwords do not match</div>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms">
+      <label for="terms">I accept the <a href="#" style="color:#fff; text-decoration:underline;">Terms & Conditions</a></label>
+    </div>
+
+    <button type="submit" class="btn" id="registerBtn" disabled>Register</button>
+  </form>
+</div>
+
+<script>
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmInput = document.getElementById('confirm');
+const termsCheckbox = document.getElementById('terms');
+const registerBtn = document.getElementById('registerBtn');
+
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const passwordError = document.getElementById('passwordError');
+const confirmError = document.getElementById('confirmError');
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+function validate(){
+  let valid = true;
+
+  if(nameInput.value.trim() === ""){ nameError.style.display='block'; valid=false; } 
+  else { nameError.style.display='none'; }
+
+  if(!emailRegex.test(emailInput.value)){ emailError.style.display='block'; valid=false; } 
+  else { emailError.style.display='none'; }
+
+  if(!passwordRegex.test(passwordInput.value)){ passwordError.style.display='block'; valid=false; } 
+  else { passwordError.style.display='none'; }
+
+  if(confirmInput.value !== passwordInput.value || confirmInput.value===""){ confirmError.style.display='block'; valid=false; } 
+  else { confirmError.style.display='none'; }
+
+  if(!termsCheckbox.checked){ valid=false; }
+
+  registerBtn.disabled = !valid;
+}
+
+[nameInput,emailInput,passwordInput,confirmInput].forEach(input=>{
+  input.addEventListener('input', validate);
+});
+termsCheckbox.addEventListener('change', validate);
+
+document.getElementById('registerForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  alert('Registration Successful!');
+  e.target.reset();
+  registerBtn.disabled = true;
+});
+</script>
+
+</body>
+</html>

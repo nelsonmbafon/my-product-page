@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Day & Period --- */
+#day-period-section label {
+  margin-right: 10px;
+}
+
+#day-select, #period-select {
+  margin-right: 20px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* --- Registration --- */
+#register-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#register-form input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#register-form button {
+  padding: 8px 12px;
+  border: none;
+  background: #004080;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#register-form button:hover {
+  background: #0066cc;
+}
+
+#register-fingerprint {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#register-fingerprint:hover {
+  transform: scale(1.1);
+}
+
+#register-fingerprint.scanning {
+  animation: scanPulse 1.5s ease-in-out;
+}
+
+@keyframes scanPulse {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.1); filter: brightness(1.5); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* --- Registered Students List --- */
+#student-list {
+  list-style-type: none;
+  padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.student-fingerprint {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* --- Attendance Table --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #004080;
+  color: #fff;
+}
+
+/* --- Buttons --- */
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #004080;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0066cc;
+}
+
+.testimonial img {
+
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    size: 50px;
+}
+

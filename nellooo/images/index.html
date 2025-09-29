@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(3, 0, 180, 0.795);
+        }
+        form{
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 30px 25px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            gap: 20px;
+        }
+        legend{
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+        legend span{
+            padding-bottom: 1px;
+            border-bottom: 3px solid rgba(3, 0, 180, 0.795)
+        }
+        input{
+            padding: 8px 16px;
+            border: 1px outset rgba(3, 0, 180, 0.795);
+            border-radius: 5px;
+            color: green;
+            outline: none;
+        }
+        label{
+            color: rgba(3, 0, 180, 0.795);
+            font-size: 14px;
+
+        }
+        input{
+            background: rgba(255, 255, 255, 0.795);
+            border: 2px solid #333;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+
+        input[type="submit"]:disabled{
+            background-color: rgba(10, 10, 226, 0.795);
+            cursor: not-allowed;
+
+
+            
+            
+        }
+        input[type="submit"]:hover{
+            transition: 0.3s;
+            transform: scale(1.05);
+            background-color: rgb(3, 184, 255);
+            
+        }
+        p{
+            text-align: center;
+
+        }
+
+        p a{
+            text-decoration: none;
+            margin-left: 5px;
+            columns: rgba(3, 0, 180, 0.795);
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        
+        <legend><span>Re</span>gistration</legend>
+        <div class="error"></div>
+        <input type="text" name="name" placeholder="Enter your name" id="name" required>
+        <div class="error"></div>
+        <input type="email" name="email" placeholder="Enter your email" id="email" required>
+        <div class="error"></div>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <div class="error"></div>
+        <input type="password" name="confirm password" placeholder="Confirm password" id="cpassword" required>
+        <div class="error"></div>
+        <label for="terms">
+            <input type="checkbox" name="terms" id="terms">
+            I accept all terms & conditions
+        </label>
+        <input type="submit" value="Register now" id="register" disabled>
+        <p>Already have an account?<a href="login.html">Login now</a></p>
+        
+    </form>
+    <script>
+        function login(id) {
+            return document.getElementById(id);
+        }
+
+
+        let name = login("name");
+        let email = login("email");
+        let password = login("password");
+        let cpassword = login("cpassword");
+        let terms = login("terms");
+        let register = login("register");
+
+        terms.addEventListener("change" , function(){
+            register.disabled = !this.checked;
+        })
+        //getting error messages
+        register.addEventListener("click", function(e) {
+            let error = document.querySelectorAll(".error");
+
+            //name validation
+
+            if (name.value == "") {
+                error[0].innerHTML = "name is required";
+                e.preventDefault();
+            } else{
+                error[0].innerHTML = "";
+            }
+
+            //email validation
+            let emailRegex =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             if (email.value == "") {
+                error[1].innerHTML = "email is required";
+                e.preventDefault();
+            } else if(!email.value.match(emailRegex)){ 
+                error[1].innerHTML = "Email is invalid";
+                e.preventDefault();
+            }else {
+                error[1].innerHTML = "";
+            }
+
+            //password validation
+            let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d]).{6,}$/;
+            if (password.value == "") {
+                 error[2].innerHTML = "password is required";
+            }
+            else if(!password.value.match(password)){ 
+                error[2].innerHTML = "password is invalid, Your password must include one uppercase, one uppercase and a number";
+                e.preventDefault();
+            }else {
+                error[2].innerHTML = "";
+            }
+            //confirm password
+              if (cpassword.value == "") {
+                 error[3].innerHTML = "password is required";
+            }
+            else if(!password.value.match(password)){ 
+                error[3].innerHTML = "password does not match";
+                e.preventDefault();
+            }else {
+                error[3].innerHTML = "";
+            }
+        })
+
+       
+    </script>
+</body>
+</html>

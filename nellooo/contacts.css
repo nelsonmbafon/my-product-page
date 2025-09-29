@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+body{
+    background-color: rgb(212, 196, 167);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    row-gap: 15px;
+
+}
+
+form input{
+    margin: 20px 0px 0px 0px;
+    padding: 15px;
+    border-radius: 25px;
+    border-top: none;
+    width: 100%;
+    background-color: azure;
+    outline: none;
+    font-size: 20px;
+    border-color: #004080;
+}
+form textarea{
+    padding: 10px;
+    border-radius: 15px 0;
+    border-top: none;
+    width: 100%;
+    height: 150px;
+    background-color: azure;
+}
+form label{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #004080;
+}
+
+
+footer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #0f5883;
+    color: white;
+    row-gap: 5px;
+    width: 100%;
+    
+}
+h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.message-box{
+    color: #0f5132;
+    box-shadow: #0f5883;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #494952;
+    color: #ffffff;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icons li{
+    list-style: none;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+
+}
+footer a:hover{
+    transform: scale(1.02);
+    color: #cece07;
+}
+
+form input{
+    padding: 10px 8px;
+    border-radius: 25px;
+
+}
+
+.icons li img {
+  width: 35px;   /* increased size */
+  height: 35px;
+  transition: 0.3s;
+}
+
+/* Facebook = blue */
+.icons li a[href*="facebook"] img {
+  filter: invert(32%) sepia(99%) saturate(5000%) hue-rotate(202deg) brightness(95%) contrast(98%);
+}
+
+/* WhatsApp = green */
+.icons li a[href*="whatsApp"] img {
+  filter: invert(40%) sepia(82%) saturate(600%) hue-rotate(89deg) brightness(95%) contrast(90%);
+}
+
+/* Twitter = light blue */
+.icons li a[href*="twitter"] img {
+  filter: invert(50%) sepia(91%) saturate(2000%) hue-rotate(176deg) brightness(96%) contrast(95%);
+}
+
+/* TikTok = black (you can add red/blue glow with shadows if you want) */
+.icons li a[href*="tiktok"] img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Form */
+.subscribe-box form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #28a745; /* green border */
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Input field */
+.subscribe-box input[type="email"] {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 250px;
+  color: #333;
+}
+
+/* Input placeholder */
+.subscribe-box input::placeholder {
+  color: #888;
+}
+
+/* Subscribe button */
+.subscribe-box button {
+  background: #28a745;   /* green background */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.subscribe-box button:hover {
+  background: #218838; /* darker green */
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    margin: 50px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #494952;
+    color: #ffffff;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo b{
+    margin-bottom: 30px;
+}
+
+.icons li{
+    list-style: none;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+
+}
+footer a:hover{
+    transform: scale(1.02);
+    color: #cece07;
+}
+
+form input{
+    padding: 10px 8px;
+    border-radius: 25px;
+
+}
+
+.icons li img {
+  width: 35px;   /* increased size */
+  height: 35px;
+  transition: 0.3s;
+}
+
+/* Facebook = blue */
+.icons li a[href*="facebook"] img {
+  filter: invert(32%) sepia(99%) saturate(5000%) hue-rotate(202deg) brightness(95%) contrast(98%);
+}
+
+/* WhatsApp = green */
+.icons li a[href*="whatsApp"] img {
+  filter: invert(40%) sepia(82%) saturate(600%) hue-rotate(89deg) brightness(95%) contrast(90%);
+}
+
+/* Twitter = light blue */
+.icons li a[href*="twitter"] img {
+  filter: invert(50%) sepia(91%) saturate(2000%) hue-rotate(176deg) brightness(96%) contrast(95%);
+}
+
+/* TikTok = black (you can add red/blue glow with shadows if you want) */
+.icons li a[href*="tiktok"] img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Form */
+.subscribe-box form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #28a745; /* green border */
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Input field */
+.subscribe-box input[type="email"] {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 250px;
+  color: #333;
+}
+
+/* Input placeholder */
+.subscribe-box input::placeholder {
+  color: #888;
+}
+
+/* Subscribe button */
+.subscribe-box button {
+  background: #28a745;   /* green background */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.subscribe-box button:hover {
+  background: #218838; /* darker green */
+}
+.language-select {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #333;
+}
+
+.language-select label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffff;
+   margin-top: 35px;
+}
+
+.language-select select {
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+ 
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(0.8); opacity: 0.6; }
+  50% { transform: scale(1); opacity: 0.3; }
+}
